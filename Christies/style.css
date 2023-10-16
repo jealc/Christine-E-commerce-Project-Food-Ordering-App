@@ -12,12 +12,17 @@ body{
 
 header{
     background-color: orange;
-    height: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
     padding: 5px 10px;
     justify-content: space-between;
     box-shadow: 0px 3px 10px 0 darkgray;
+}
+
+header p{
+    color: white;
+    font-size: 18px;
 }
 
 .order-button {
@@ -63,6 +68,7 @@ header{
 
 #search-button:hover {
     background-color: orangered;
+    color: white;
 }
 
 .landing {
@@ -71,7 +77,7 @@ header{
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color: #fff; /* Text color on top of the image */
+    color: #fff;
 }
 
 .overlay {
@@ -152,21 +158,28 @@ p {
     color: white;
 }
 
-.menu {
+.top-choices-heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: orangered;
+}
+  
+.top-choices-menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns in the grid */
-    gap: 10px; /* Gap between items */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     margin: 20px;
 }
 
-.menu-item {
+.top-choices-menu-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.menu-button {
+.top-choices-menu-button {
     background-color: orange;
     color: black;
     padding: 10px 40px;
@@ -176,9 +189,14 @@ p {
     font-size: 30px;
 }
 
-.menu-item img {
-    width: 250px; /* Adjust the image size as needed */
-    height: 250px; /* Adjust the image size as needed */
+.top-choices-menu-button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.top-choices-menu-item img {
+    width: 250px; 
+    height: 250px;
     border: 2px solid #333;
     border-radius: 50%;
     padding: 5px;
@@ -188,32 +206,21 @@ ul {
     list-style: none;
 }
 
+.promos-discounts-heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: orangered;
+}
+
 .extras {
     display: flex;
     gap: 50px;
 }
 
-h2 {
+.extras h2 {
     color: darkred;
     font-size: 18px;
-}
-
-.separator-line-contact-us {
-    width: 50px;
-    height: 3px;
-    background-color: darkred;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-.separator-line-social-media {
-    width: 50px;
-    height: 3px;
-    background-color: darkred;
-    margin: 0;
-    padding: 0;
-    border: none;
 }
 
 .contact-us {
@@ -223,5 +230,146 @@ h2 {
 
 .social-media {
     font-size: 20px;
+    color: white;
+}
+
+.popup-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 70px;
+    z-index: 100;
+}
+  
+.popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.popup-menu li {
+    margin-bottom: 10px;
+}
+  
+.popup-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 100;
+    width: 300px;
+    text-align: center;
+}
+  
+.cart-popup h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.cart-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.cart-popup li {
+    margin-bottom: 10px;
+}
+  
+.cart-popup p {
+    font-weight: bold;
+}
+  
+#close-cart {
+    background-color: orangered;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+  
+#close-cart:hover {
+    background-color: red;
+    color: white;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 15px;
+    width: 400px;
+    z-index: 100;
+}
+  
+.chat-header {
+    background-color: orange;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+  
+.chat-header h2 {
+    margin: 0;
+}
+  
+#close-chat {
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+  
+#close-chat:hover {
+    text-decoration: underline;
+    color: white;
+}
+  
+.chat-messages {
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+  
+#chat-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    resize: none;
+}
+  
+#send-message {
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+#send-message:hover {
+    background-color: orangered;
     color: white;
 }
