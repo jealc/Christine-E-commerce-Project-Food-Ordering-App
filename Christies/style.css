@@ -35,6 +35,36 @@ header{
     color: white;
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+#search-input {
+    flex: 1;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    outline: none;
+}
+
+#search-button {
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: orangered;
+}
+
 .landing {
     position: relative;
     background-image: url('https://flo.health/uploads/media/sulu-1200x630/09/1599-Fast%20food.jpg?v=1-0&inline=1');
@@ -67,6 +97,37 @@ p {
     color: black;
 }
 
+#menu-button {
+    background-color: orangered;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#menu-button:hover {
+    background-color: red;
+    color: white;
+}
+
+#cart-button {
+    background-color: orangered;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#cart-button i {
+    margin-right: 5px; 
+}
+
+#cart-button:hover {
+    background-color: red;
+    color: white;
+}
 .separator-line {
     width: 97%;
     height: 2px;
@@ -94,7 +155,7 @@ p {
 .menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns in the grid */
-    gap: 20px; /* Gap between items */
+    gap: 10px; /* Gap between items */
     margin: 20px;
 }
 
