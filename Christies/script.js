@@ -18,28 +18,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Get the cart button and the cart pop-up
-const cartButton = document.getElementById("cart-button");
-const cartPopup = document.getElementById("cart-popup");
-const closeCartButton = document.getElementById("close-cart");
-
-// Toggle the visibility of the cart pop-up when the Cart button is clicked
-cartButton.addEventListener("click", function () {
-  cartPopup.style.display = "block";
-});
-
-// Close the cart pop-up when clicking the "Close" button
-closeCartButton.addEventListener("click", function () {
-  cartPopup.style.display = "none";
-});
-
-// Close the cart pop-up when clicking outside of it
-document.addEventListener("click", function (event) {
-  if (!cartButton.contains(event.target) && !cartPopup.contains(event.target)) {
-    cartPopup.style.display = "none";
-  }
-});
-
 // Get the chat button, chat box, and message-related elements
 const chatButton = document.getElementById("chat-button");
 const chatBox = document.getElementById("chat-box");
