@@ -40,37 +40,6 @@ header p{
     color: white;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 50px;
-    padding: 5px;
-    background-color: #fff;
-}
-
-#search-input {
-    flex: 1;
-    border: none;
-    border-radius: 50px;
-    padding: 10px;
-    outline: none;
-}
-
-#search-button {
-    background-color: orange;
-    color: black;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-#search-button:hover {
-    background-color: orangered;
-    color: white;
-}
-
 .landing {
     position: relative;
     background-image: url('https://flo.health/uploads/media/sulu-1200x630/09/1599-Fast%20food.jpg?v=1-0&inline=1');
@@ -81,7 +50,7 @@ header p{
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -98,13 +67,20 @@ h1 {
     font-size: 36px;
 }
 
+#delivery-name {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: cursive;
+    color: aqua;
+}
 p {
     font-size: 20px;
     color: black;
 }
 
-#menu-button {
+#sign-up-button {
     background-color: orangered;
+    font-size: 15px;
     color: black;
     padding: 10px 20px;
     border: none;
@@ -112,28 +88,20 @@ p {
     cursor: pointer;
 }
 
-#menu-button:hover {
+#sign-up-button:hover {
     background-color: red;
     color: white;
 }
 
-#cart-button {
-    background-color: orangered;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+#hover-message {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-#cart-button i {
-    margin-right: 5px; 
-}
-
-#cart-button:hover {
-    background-color: red;
-    color: white;
-}
 .separator-line {
     width: 97%;
     height: 2px;
@@ -165,21 +133,21 @@ p {
     color: orangered;
 }
   
-.top-choices-menu {
+.top-choices {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 20px;
 }
 
-.top-choices-menu-item {
+.top-choices-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.top-choices-menu-button {
+.top-choices-button {
     background-color: orange;
     color: black;
     padding: 10px 40px;
@@ -189,12 +157,12 @@ p {
     font-size: 30px;
 }
 
-.top-choices-menu-button:hover {
+.top-choices-button:hover {
     background-color: orangered;
     color: white;
 }
 
-.top-choices-menu-item img {
+.top-choices-item img {
     width: 250px; 
     height: 250px;
     border: 2px solid #333;
@@ -211,6 +179,43 @@ ul {
     font-size: 36px;
     margin-bottom: 30px;
     color: orangered;
+}
+
+.promos-discounts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.promos-discounts-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.promos-discounts-button {
+    background-color: orange;
+    color: black;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.promos-discounts-button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.promos-discounts-item img {
+    width: 250px; 
+    height: 250px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .extras {
@@ -233,80 +238,70 @@ ul {
     color: white;
 }
 
-.popup-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 10px;
-    background-color: aqua;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 70px;
-    z-index: 100;
-}
-  
-.popup-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-  
-.popup-menu li {
-    margin-bottom: 10px;
-}
-  
-.popup-menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-}
-
-.cart-popup {
+.popup {
     display: none;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popup-content {
+    background: #fff;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    border: 2px solid black;
-    border-radius: 5px;
     padding: 20px;
-    z-index: 100;
-    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+h2 {
     text-align: center;
 }
   
-.cart-popup h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.form-group {
+    margin: 10px 0;
 }
   
-.cart-popup ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
   
-.cart-popup li {
-    margin-bottom: 10px;
-}
-  
-.cart-popup p {
-    font-weight: bold;
-}
-  
-#close-cart {
-    background-color: orangered;
-    color: black;
+.signup-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 3px;
     cursor: pointer;
 }
-  
-#close-cart:hover {
-    background-color: red;
-    color: white;
+
+.signup-button:hover {
+    background-color: #45a049;
 }
 
 .chat-box {
@@ -315,17 +310,20 @@ ul {
     bottom: 20px;
     right: 20px;
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     width: 400px;
     z-index: 100;
 }
   
 .chat-header {
     background-color: orange;
+    height: 40px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     padding: 10px;
 }
   
@@ -372,4 +370,41 @@ ul {
 #send-message:hover {
     background-color: orangered;
     color: white;
+}
+
+
+.rating-section {
+    text-align: center;
+}
+
+.stars {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.star {
+    color: gray;
+}
+
+.rating-feedback {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
