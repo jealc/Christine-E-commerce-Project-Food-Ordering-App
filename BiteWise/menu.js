@@ -75,7 +75,7 @@ function updateCartDisplay() {
     const itemNameElement = document.createElement("span");
     itemNameElement.textContent = itemName;
     const itemPriceElement = document.createElement("span");
-    itemPriceElement.textContent = `$${itemPrice.toFixed(2)}`;
+    itemPriceElement.textContent = `KSH${itemPrice.toFixed(2)}`;
     
     // Append the elements to the cart item
     cartItem.appendChild(itemNameElement);
@@ -95,7 +95,7 @@ function updateTotalAmount() {
       totalAmount += cart[itemName];
     }
     
-    totalAmountElement.textContent = `Total: $${totalAmount.toFixed(2)}`;
+    totalAmountElement.textContent = `Total: KSH${totalAmount.toFixed(2)}`;
   }
 
 // Event listener for the "Order Now" buttons
