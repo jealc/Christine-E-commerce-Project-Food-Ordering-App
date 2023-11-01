@@ -25,7 +25,6 @@
             <button class="starter-button" id="fourth-restaurant-btn">Fifi's Fries</button>
             <button class="starter-button" id="fifth-restaurant-btn">Beef Ranch</button>
             <button class="starter-button" id="sixth-restaurant-btn">Cooly's Drink Stand</button>
-            <!--<button class="starter-button" id="extras-section-btn">Promo's & Discounts</button>-->
           </nav>
         </header>
         <section class="menu-category" id="first-restaurant">
@@ -346,59 +345,6 @@
             </div>
           </div>   
         </section>
-        <!--<section class="menu-category" id="extras-section">
-          <h2>Promo's & Discounts</h2>
-          <div class="menu-container">
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-            <div class="food-item">
-              <img src="https://www.chilipeppermadness.com/wp-content/uploads/2022/12/Beef-Stew-Recipe-SQ.jpg" alt="item image">
-              <h3>Food Item Name 1</h3>
-              <p>PRICE:  KSH10.00</p>
-              <button class="order-now" food-name="Food Item Name 1" food-price="10.00">Order Now</button>
-            </div>
-          </div>   
-        </section>-->
         <div class="cart-button" id="cart-button">
           <i class="fa-solid fa-cart-shopping"></i>
         </div>
@@ -406,6 +352,7 @@
           <div class="cart-starter">
             <span class="close" id="closeCart">&times;</span>
             <h2>Your Orders!</h2>
+            <button id="clearCartButton" class="clear-cart-button">Clear Cart</button>
           </div>
           <div class="cart-content"></div>
           <div class="total-amount">
@@ -419,18 +366,18 @@
           <form id="checkoutForm" class="checkout-form">
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" required>
-            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
             <label for="paymentMethod">Payment Method:</label>
             <select id="paymentMethod" name="paymentMethod">
               <option value="mpesa">M-Pesa</option>
               <option value="payUponDelivery">Pay Upon Delivery</option>
             </select>
-            
             <button type="button" id="placeOrderButton">Place Order</button>
           </form>
           <div id="orderConfirmation" class="order-confirmation">
           </div>
-        </div>        
+        </div>      
         <script src="menu.js"></script>
       </body>
 </html>

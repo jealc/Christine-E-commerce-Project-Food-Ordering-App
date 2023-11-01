@@ -126,13 +126,17 @@ h2 {
     padding: 20px;
     z-index: 100;
     width: 400px;
-    height: 400px;
+    height: 425px;
     align-items: center;
     text-align: center;
 }
 
 .cart-starter {
     text-align: center;
+}
+
+.clear-cart-button {
+    margin-bottom: 5px;
 }
 
 .cart-content {

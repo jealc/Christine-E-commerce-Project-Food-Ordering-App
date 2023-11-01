@@ -147,31 +147,12 @@ p {
     text-align: center;
 }
 
-.top-choices-button {
-    background-color: orange;
-    color: black;
-    padding: 10px 40px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 30px;
-}
-
-.top-choices-button:hover {
-    background-color: orangered;
-    color: white;
-}
-
 .top-choices-item img {
     width: 250px; 
     height: 250px;
     border: 2px solid #333;
     border-radius: 50%;
     padding: 5px;
-}
-
-ul {
-    list-style: none;
 }
 
 .promos-discounts-heading {
@@ -195,47 +176,12 @@ ul {
     text-align: center;
 }
 
-.promos-discounts-button {
-    background-color: orange;
-    color: black;
-    padding: 10px 40px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 30px;
-}
-
-.promos-discounts-button:hover {
-    background-color: orangered;
-    color: white;
-}
-
 .promos-discounts-item img {
     width: 250px; 
     height: 250px;
     border: 2px solid #333;
     border-radius: 50%;
     padding: 5px;
-}
-
-.extras {
-    display: flex;
-    gap: 50px;
-}
-
-.extras h2 {
-    color: darkred;
-    font-size: 18px;
-}
-
-.contact-us {
-    font-size: 20px;
-    color: white;
-}
-
-.social-media {
-    font-size: 20px;
-    color: white;
 }
 
 .popup {
@@ -393,7 +339,7 @@ input {
 }
 
 textarea {
-    width: 100%;
+    width: 95%;
     height: 100px;
     margin: 10px 0;
 }
@@ -409,3 +355,23 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+  
+.contact-info {
+    margin-top: 20px;
+}
+  
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+.contact-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}  
