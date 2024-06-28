@@ -1,1 +1,1 @@
-# Christine-E-commerce-Project-Food-Ordering-App
+# E-commerce-Project-Food-Ordering-App
